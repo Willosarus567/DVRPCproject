@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+    {% block content %}
+        <h1>DVRPC Mined Data</h1>
+        <ol>
+
+            <li class=" mb-3">
+                <p>SQL command to Get count by RECORDNUM</p>
+                {% for answer1 in data1 %}
+                    {{ answer1 }}<br>     
+                {% endfor %}
+            </li>
+            
+            <li class=" mb-3">
+                <p>Get all counts sorted by oldest SETDATE to newest</p>
+                {% for answer2 in data2 %}
+                    {{ answer2 }}<br>
+                {% endfor %}
+            </li>
+            
+            <li class=" mb-3">
+                <p>Get counts filtered by facility type</p>
+                {% for answer3 in data3 %}<br>
+                    {{ answer3 }}
+                {% endfor %}
+            </li>
+            
+            <li class=" mb-3">
+                <p>Get counts filter by PRCP > 0 Join on SETDATE</p>
+                {% for answer7 in data7 %}<br>
+                    {{ answer7 }}
+                {% endfor %}
+            </li>
+            
+            <li class=" mb-3">
+                <p>Get 5 counts nearest to a lat/lng position</p>
+                {% for answer8 in data8 %}<br>
+                    {{ answer8 }}
+                {% endfor %}
+            </li>
+            
+            <li class=" mb-3">
+                <p>Get a list of all facility types</p>
+                {% for answer6 in data6 %}<br>
+                    {{ answer6 }}
+                {% endfor %}
+            </li>
+            
+            <li class=" mb-3">
+                <p>Insert new count</p>
+                {% for answer9 in data9 %}<br>
+                    {{ answer9 }}
+                {% endfor %}
+            </li>
+            
+            <li class=" mb-3">
+                <p>Update count by Recordnum</p>
+                {% for answer10 in data10 %}<br>
+                    {{ answer10 }}
+                {% endfor %}
+            </li>
+            
+            <li class=" mb-3">
+                <p>Delete count by Recordnum</p>
+                {% for answer11 in data11 %}<br>
+                    {{ answer11 }}
+                {% endfor %}
+            </li>
+
+        </ol>
+    {% endblock content %}

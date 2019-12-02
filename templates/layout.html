@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+
+        <head>
+            {% if title %}
+                <title>S.I.P. - {{ title }}</title>
+            {% else %}
+                <title>S.I.P. blank page</title>
+            {% endif %}
+            
+        </head>
+    <body>
+            <header class="site-header">
+                    <nav class="navbar navbar-expand-md navbar-dark bg-success fixed-top">
+                      <div class="container">
+                        <a class="navbar-brand mr-4" href="{{ url_for('default') }}">Standard Information Page</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+                          <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarToggle" style="text-shadow: 5px 5px 16px rgb(235, 131, 83), 3px 2px 5px rgb(235, 131, 83),-2px 2px 5px rgb(235, 131, 83), 5px 5px 16px rgb(235, 131, 83);">
+                          <div class="navbar-nav mr-auto">
+                            <a class="nav-item nav-link" href="/">Home</a>
+                            <a class="nav-item nav-link" href="{{ url_for('DVRPC') }}">DVRPC Bike Data</a>
+                          </div>
+                          <!-- Navbar Right Side -->
+                          <div class="navbar-nav">
+                            
+                              <a class="nav-item nav-link" href="https://www.dvrpc.org/" target="_blank">DVRPC Main Website</a>
+                              <a class="nav-item nav-link" href="https://weather.com/" target="_blank">Weather Forecast</a>
+                              <a class="nav-item nav-link" href="https://www.visitphilly.com/getting-around/" target="_blank">Public Transportation</a>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    </nav>
+                  </header>
+
+                  <main role="main" class="container">
+                        <div class="row">
+                          <div class="col-md-8">
+
+                            {% if route %}
+                              {% block content %}
+                              {% endblock %}
+                            {% else %}
+                                <h2 class=" bg-danger text-white col-3" style="border-radius: 10%; text-align: center;">Read Me:</h2>
+                                <p>To use this website please read the following steps:</p>
+                                
+                                <ol>
+                                  <li class=" pb-2 ">
+                                    To access key mined data, press DVRPC Bike Data. 
+                                  </li>
+                                  <li class=" pb-2 ">
+                                      To get back to the main page of S.I.P. click Home option on the navbar, Standard Information Page option on the navbar will result in a default page. 
+                                    </li>
+                                  <li class=" pb-2 ">
+                                    To view DVRPC's main website click the first option on the main navbar's rightside menu.
+                                  </li>
+                                  <li class=" pb-2 ">
+                                      To access information about the weather or public transportation in the philadelphia area, click either of the two options next to DVRPC Main Website.  
+                                    </li>
+                                  <li class=" pb-2 ">
+                                    This website is responsive on all screen sizes but to get the best viewing experience, please use mobile or desktop view. 
+                                  </li>
+                                </ol>    
+                            {% endif %}
+      
+                          </div>
+                          <div class="col-md-4">
+                            <div class="content-section">
+                              <h3>S.I.P. Sidebar</h3>
+                              <p class='text-muted'>It's stylistically designed to have a sidebar because it looks nice.
+                                <ul class="list-group">
+                                  <li class="list-group-item list-group-item-light">Latest Posts</li>
+                                  <li class="list-group-item list-group-item-light">Announcements</li>
+                                  <li class="list-group-item list-group-item-light">Calendars</li>
+                                  <li class="list-group-item list-group-item-light">etc</li>
+                                </ul>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="row" style="border-top: 1px solid black;padding:0px; background-color: rgb(180, 241, 233);">
+                            <div class="col-md-8">
+  
+                                  <h2 class=" bg-danger text-white col-5" style="border-radius: 10%; text-align: center;">Don't Read Me:</h2>
+                                  <p>This is a filler section so my footer can stay at the bottom of the page</p>
+                                  
+                                  <ol>
+                                    <li class=" pb-2 ">
+                                      This is the first option 
+                                    </li>
+                                    <li class=" pb-2 ">
+                                        This is the second option 
+                                      </li>
+                                    <li class=" pb-2 ">
+                                        This is the third option
+                                    </li>
+                                    <li class=" pb-2 ">
+                                        This is the fourth option  
+                                      </li>
+                                    <li class=" pb-2 ">
+                                        This is the fifth option 
+                                    </li>
+                                  </ol>    
+        
+                            </div>
+                            <div class="col-md-4">
+                              <div class="content-section">
+                                <h3>S.I.P. Sidebar</h3>
+                                <p class='text-muted'>It's stylistically designed to have a sidebar because it looks nice.
+                                  <ul class="list-group">
+                                    <li class="list-group-item list-group-item-light">Latest Posts</li>
+                                    <li class="list-group-item list-group-item-light">Announcements</li>
+                                    <li class="list-group-item list-group-item-light">Calendars</li>
+                                    <li class="list-group-item list-group-item-light">etc</li>
+                                  </ul>
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        
+                      </main>
+
+                      <footer>
+                        <div class="bg-success d-none d-sm-block d-md-block text-white py-1" style="border-top: 1px solid black;padding:0px;">
+                                    <div class="container-fluid ">
+                                        <div class="row">
+                                            <div class="column col-3">
+                                                <i class="far fa-copyright pr-2"></i><span style="font-family:'Times New Roman', Times, serif">Standard Information Page</span>
+                                            </div>
+                                                <div class="column col-4 offset-1" style="text-align: center;font-family:'Times New Roman', Times, serif">
+                                                    This website is not endorsed or approved by, 
+                                                    and is not in any way affiliated with Delaware Valley Regional Planning Commision or the City of Philadelphia. 
+                                                    Standard Information Page makes no representation about the products and services advertised 
+                                                    and offered on this website.
+                                                </div>
+                                                    <div class="column offset-1">
+                                                        <img src="https://funscapedomains.nfshost.com/wp-content/uploads/2019/10/logo_transparent1.png" alt="logo1" width="120px;" class="ml-3">
+                                                    </div>
+                                        </div>
+                                    </div>
+                            </div>
+                        <!-- End of Footer Desktop & Tablet -->
+                        
+                        <!-- Footer Mobile -->       
+                            <div class="bg-success d-md-none d-lg-none d-xl-none text-white py-1" style="border-top: 1px solid black;padding:0;">
+                                <div class="container ">
+                                    <span style="font-size:19px;"><i class="far fa-copyright pr-2"></i><span style="text-align:center;font-family:'Times New Roman', Times, serif;">Standard Information Page</span></span>
+                                        <div class="mr-3" style="text-align:center;font-family:'Times New Roman', Times, serif;">
+                                            This website is not endorsed or<br> 
+                                            approved by, and is not in any way<br> 
+                                            affiliated with<br>
+                                            Delaware Valley Regional Planning Commision<br> 
+                                            or the City of Philadelphia<br> 
+                                            Standard Information Page makes no representation<br> 
+                                            about the products and services advertised<br> 
+                                            and offered on this website.
+                                        </div>
+                                </div>
+                            </div>
+                          </footer>
+        
+
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </body>
+</html>
