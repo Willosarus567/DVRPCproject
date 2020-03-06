@@ -2,9 +2,9 @@
 import psycopg2
 
 connection = psycopg2.connect(user = "postgres",
-                             password = "jinja99",
+                             password = "",
                              host = "127.0.0.1",
-                             port = "5432",
+                             port = "",
                              database = "DVRPC") 
 print("Database successfully opened")   
 
