@@ -4,9 +4,9 @@ from flask import Flask, render_template, url_for, flash, redirect, request, abo
 app = Flask(__name__)
 
 connection = psycopg2.connect(user = "postgres",
-                             password = "jinja99",
+                             password = "",
                              host = "127.0.0.1",
-                             port = "5432",
+                             port = "",
                              database = "DVRPC") 
 print("Database successfully opened")
 
