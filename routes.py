@@ -3,11 +3,11 @@ from flask import Flask, render_template, url_for, flash, redirect, request, abo
 
 app = Flask(__name__)
 
-connection = psycopg2.connect(user = "postgres",
+connection = psycopg2.connect(user = "",
                              password = "",
-                             host = "127.0.0.1",
+                             host = "",
                              port = "",
-                             database = "DVRPC") 
+                             database = "") 
 print("Database successfully opened")
 
 cursor = connection.cursor()
