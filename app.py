@@ -1,11 +1,11 @@
 ##from flask import FLASK, render_template, url_for, flash, redirect, request, abort 
 import psycopg2
 
-connection = psycopg2.connect(user = "postgres",
+connection = psycopg2.connect(user = "",
                              password = "",
-                             host = "127.0.0.1",
+                             host = "",
                              port = "",
-                             database = "DVRPC") 
+                             database = "") 
 print("Database successfully opened")   
 
 cursor = connection.cursor()
